@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JSON Reindeer</h2>
+
+<p id="demo"></p>
+
+<script>
+var text = '{"reindeer":[ ' +
+	'{"name":"Dasher", "favFood":"carrots"},' +
+	'{"name":"Prancer", "favFood":"sugar cookies"},' +
+	'{"name":"Vixen", "favFood":"holly"},' +
+	'{"name":"Comet", "favFood":"hot chocolate"},' +
+	'{"name":"Cupid", "favFood":"apple pie"},' +
+	'{"name":"Donder", "favFood":"stuffing"},' +
+	'{"name":"Blitzen", "favFood":"green bean caserole"},' +
+	'{"name":"Rudolph", "favFood":"chocolate cake"}]}';
+
+var obj = JSON.parse(text);
+
+document.getElementById("demo").innerHTML = "";
+
+for(i = 0; i < obj.reindeer.length; i++){
+	document.getElementById("demo").innerHTML = 
+		document.getElementById("demo").innerHTML +
+		obj.reindeer[i].name + "'s favorite food is " +
+		obj.reindeer[i].favFood + "<br>";
+
+}
+
+x = x + 1;
+
+</script>
+
+</body>
+</html>
